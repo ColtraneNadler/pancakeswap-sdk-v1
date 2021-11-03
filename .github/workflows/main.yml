@@ -19,15 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with: 
-          node-version: 14
-          registry-url: https://npm.pkg.github.com
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          registry-url: 'https://npm.pkg.github.com'
           scope: '@coltranenadler'
-      - run: yarn install
-      - run: yarn build
+      - run: npm install
       - run: npm publish
         env: 
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
