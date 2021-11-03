@@ -8,7 +8,10 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pancakeswap/pancakeswap-sdk.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ColtraneNadler/pancakeswap-sdk-v1.git"
+  },
   "keywords": [
     "pancakeswap",
     "ethereum"
