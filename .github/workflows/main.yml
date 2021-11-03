@@ -23,8 +23,8 @@ jobs:
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
-          registry: 'https://npm.pkg.github.com'
+          node-version: '14.x'
+          registry-url: 'https://npm.pkg.github.com'
           scope: '@coltranenadler'
       - run: yarn install
       - run: yarn build
