@@ -22,9 +22,6 @@
     "test": "tsdx test",
     "prepublishOnly": "tsdx build"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@ColtraneNadler"
-  },
   "dependencies": {
     "@pancakeswap-libs/pancake-swap-core": "^0.1.0",
     "big.js": "^5.2.2",
