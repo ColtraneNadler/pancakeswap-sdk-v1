@@ -26,7 +26,8 @@ jobs:
           node-version: '14'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@coltranenadler'
-      - run: npm install
+      - run: yarn install
+      - run: yarn build
       - run: npm publish
         env: 
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
